@@ -1,0 +1,140 @@
+a = 60
+b = 13
+-------
+  = 47     SUBTRACT
+
+-convert a and b to binary
+-perform subtraction in its binary state
+-convert answer to decimal notation
+
+                2212
+ 0000 0000 0010 0000
+-0000 0000 0000 1101
+---------------------
+ 0000 0000 0010 1111
+
+32 + 16 = 48 + 8 = 56 + 4 = 60
+32+8+4+2+1 = 47
+
+===================================================================
+
+a = 60
+b = 13
+
+a & b      AND
+
+- convert a and b into binary
+- then perform & on each column
+
+ 0000 0000 0011 1100
+ 0000 0000 0000 1101
+ -------------------
+ 0000 0000 0000 1100    = 12
+
+ given   then
+ x  y    x&y
+ 0  0     0
+ 0  1     0
+ 1  0     0
+ 1  1     1
+
+ so x&y for 60 & 32 is 12 OR 0000 0000 0000 1101
+
+ ===================================================================
+
+a = 60
+b = 13
+
+a | b      OR
+
+- convert a and b into binary
+- on each column perform the |(OR) operator
+
+ 0000 0000 0011 1100
+ 0000 0000 0000 1101
+ -------------------
+ 0000 0000 0011 1101   =   61
+
+ given   then
+ x  y    x|y
+ 0  0     0
+ 0  1     1
+ 1  0     1
+ 1  1     1
+
+  so x|y for 60 & 32 is 61 OR 0000 0000 0011 1101
+
+
+ ===================================================================
+
+a = 60
+b = 13
+
+a ^ b   XOR
+
+- convert a and b into binary
+- perform ^ on each item
+
+ 0000 0000 0011 1100
+ 0000 0000 0000 1101
+ -------------------
+ 0000 0000 0011 0001  = 49
+
+** ^(x OR) means that only one of them can equal 1. if both eqaual 1, then it is 0 **
+
+  given   then
+ x  y    x^y
+ 0  0     0
+ 0  1     1
+ 1  0     1
+ 1  1     0
+
+  so x^y for 60 & 32 is 49 OR 0000 0000 0011 0001
+
+
+ ===================================================================
+
+a = 60
+
+a >> 2    SHIFT (in this case a shifts right two)
+
+- convert a and b into binary
+- shift two bits to the right
+
+ 0000 0000 0011 1100
+ -------------------
+ 0000 0000 0000 1111    = 15
+
+
+  so x>>2 for 60 is 15 OR 0000 0000 0000 1111
+
+  if it were x<<2 then it would be shift left two
+
+0000 0000 0011 1100
+-------------------
+0000 0000 1111 0000  = 240
+
+
+ ===================================================================
+
+a = 60
+
+~a    (NOT)
+
+- convert a and b into binary
+- flip all of its digits
+- translate to decimal notation
+
+ 0000 0000 0011 1100
+ -------------------
+ 1111 1111 1100 0011  since this is negative, we have to flip all the nums again
+ -------------------
+ 0000 0000 0011 1100
+ 0000 0000 0000 0001  add one to the number
+ -------------------
+ 0000 0000 0011 1101  = -61
+
+ so, the answer to ~a is -61
+ 
+
+**NOTE** if the farthest left digit in a binary sequence is a 1 then the number is negative, and it is called a SIGNED INTIGER)
